@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📄 Protokoll-Vorlage für Typst
+# Protokoll-Vorlage für Typst
 
 [![Typst](https://img.shields.io/badge/Typst-0.15-239DAD?style=for-the-badge&logo=typst&logoColor=white)](https://typst.app)
 [![Sprache](https://img.shields.io/badge/Sprache-Deutsch-0F4761?style=for-the-badge)](#)
@@ -16,26 +16,26 @@ ohne Word, ohne verrutschte Tabellen.
 
 <img src="docs/vorschau.png" alt="Vorschau: Deckblatt und Folgeseite" width="820">
 
-[Schnellstart](#-schnellstart) •
-[Felder](#-felder) •
-[Folgeseiten](#-folgeseiten) •
-[Schriften](#-schriften) •
-[Genauigkeit](#-wie-genau-ist-der-nachbau)
+[Schnellstart](#schnellstart) •
+[Felder](#felder) •
+[Folgeseiten](#folgeseiten) •
+[Schriften](#schriften) •
+[Genauigkeit](#wie-genau-ist-der-nachbau)
 
 </div>
 
 ---
 
-## ✨ Features
+## Features
 
-- 🧾 **Deckblatt wie im Original:** alle Rahmen, Zellen und Logos an derselben Stelle
-- 📐 **Maße direkt aus dem Word-XML:** Spaltenbreiten, Zeilenhöhen, Rahmenstärken, Tabstopps
-- 📏 **Felder wachsen mit:** mehr Gruppenmitglieder oder Software-Zeilen machen die Zeile höher,
+- **Deckblatt wie im Original:** alle Rahmen, Zellen und Logos an derselben Stelle
+- **Maße direkt aus dem Word-XML:** Spaltenbreiten, Zeilenhöhen, Rahmenstärken, Tabstopps
+- **Felder wachsen mit:** mehr Gruppenmitglieder oder Software-Zeilen machen die Zeile höher,
   „Anmerkungen“ füllt den Rest der Seite
-- 🔤 **Freie Ersatzschriften:** sieht auch ohne Microsoft-Schriften korrekt aus
-- 🧩 **Eine Datei, ein Aufruf:** `#show: protokoll.with(...)` und los
+- **Freie Ersatzschriften:** sieht auch ohne Microsoft-Schriften korrekt aus
+- **Eine Datei, ein Aufruf:** `#show: protokoll.with(...)` und los
 
-## 🚀 Schnellstart
+## Schnellstart
 
 ```sh
 ./scripts/fetch-aptos.sh            # einmalig: Schrift Aptos laden (optional, siehe unten)
@@ -75,7 +75,7 @@ Text …
 > typst compile --root . --font-path fonts unterordner/protokoll.typ
 > ```
 
-## 🗂️ Felder
+## Felder
 
 Alle Felder sind optional – was fehlt, bleibt (wie im Word-Deckblatt) leer.
 Fett/normal entspricht dem ausgefüllten Original.
@@ -103,7 +103,7 @@ Fett/normal entspricht dem ausgefüllten Original.
 Listen dürfen auch ein einzelner String sein. Statt Strings geht überall auch
 Typst-Inhalt, z. B. `verfasser: [*Vorname* Nachname]`.
 
-## 📑 Folgeseiten
+## Folgeseiten
 
 | Typst          | Word-Formatvorlage   | Aussehen                                                        |
 | -------------- | -------------------- | --------------------------------------------------------------- |
@@ -117,7 +117,7 @@ Typst-Inhalt, z. B. `verfasser: [*Vorname* Nachname]`.
 Kopfzeile: Cambria 12 pt mit Tabstopps bei 8 cm (zentriert) und 16 cm (rechts).
 Fußzeile: „Seite X von Y“ rechts – auf jeder Seite inkl. Deckblatt, wie im Original.
 
-## 🔤 Schriften
+## Schriften
 
 | Word    | verwendet                                              | Herkunft                                   |
 | ------- | ------------------------------------------------------ | ------------------------------------------ |
@@ -129,7 +129,7 @@ Fußzeile: „Seite X von Y“ rechts – auf jeder Seite inkl. Deckblatt, wie i
 > Typst meldet `unknown font family: arial / cambria`, wenn die Microsoft-Schrift
 > nicht installiert ist. Das ist harmlos – dann greift die Ersatzschrift.
 
-## 🎯 Wie genau ist der Nachbau?
+## Wie genau ist der Nachbau?
 
 Alle Maße stammen direkt aus dem Word-XML (Spaltenbreiten, Zeilenhöhen,
 Rahmen 1,5 pt / 0,5 pt, Zellabstände, Tabstopps, Kopf-/Fußzeilenabstand).
@@ -143,7 +143,7 @@ Bewusste Abweichung: LibreOffice zeichnet im Original eine senkrechte Linie quer
 durch „Protokoll Netzwerktechnik“ und „Titel der Übung“ (Darstellungsfehler bei
 verbundenen Zellen) – Word tut das nicht, diese Vorlage auch nicht.
 
-## 📁 Aufbau
+## Aufbau
 
 ```
 .
