@@ -1,4 +1,5 @@
-// Neues Protokoll: diese Datei kopieren, Werte anpassen, kompilieren mit
+// Das Protokoll direkt hier hineinschreiben: Werte anpassen, Text ergänzen,
+// kompilieren mit
 //   typst compile --font-path fonts main.typ
 // Nicht benötigte Felder einfach weglassen (bleiben dann leer).
 

@@ -37,13 +37,17 @@ ohne Word, ohne verrutschte Tabellen.
 
 ## Schnellstart
 
+Das Protokoll wird direkt in `main.typ` geschrieben: Werte im Deckblatt
+anpassen, Text darunter ergänzen, kompilieren.
+
 ```sh
 ./scripts/fetch-aptos.sh            # einmalig: Schrift Aptos laden (optional, siehe unten)
-cp main.typ mein-protokoll.typ      # Werte darin anpassen
-typst compile --font-path fonts mein-protokoll.typ
+typst compile --font-path fonts main.typ
 ```
 
-Eine Protokoll-Datei sieht so aus:
+Mit `typst watch` statt `typst compile` wird das PDF bei jedem Speichern neu erzeugt.
+
+`main.typ` sieht so aus:
 
 ```typst
 #import "protokoll.typ": protokoll, leerzeile
@@ -66,14 +70,6 @@ Eine Protokoll-Datei sieht so aus:
 = Aufgabenstellung
 Text …
 ```
-
-> [!TIP]
-> Liegt die Protokoll-Datei in einem Unterordner, braucht Typst `--root .`,
-> damit es auf `protokoll.typ` zugreifen darf:
->
-> ```sh
-> typst compile --root . --font-path fonts unterordner/protokoll.typ
-> ```
 
 ## Felder
 
@@ -148,7 +144,7 @@ verbundenen Zellen) – Word tut das nicht, diese Vorlage auch nicht.
 ```
 .
 ├── protokoll.typ                  # die Vorlage
-├── main.typ                       # Startdatei für ein neues Protokoll
+├── main.typ                       # dein Protokoll – hier hineinschreiben
 ├── assets/                        # Logos für das Deckblatt
 ├── fonts/                         # Caladea (Ersatz für Cambria, OFL)
 ├── original/
